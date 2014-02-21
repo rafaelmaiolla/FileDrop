@@ -1462,6 +1462,8 @@ window.fd = window.fd || {}
         // Chrome-based) so fire off the usual on-drop event.
         global.callAllOfObject(self, 'send', [files])
       }
+
+      self.opt.input && self.opt.input.file && (self.opt.input.file.value = "");
     }
 
     // Retrieves fd.File objects from an on-drop event. Returns a fd.FileList
